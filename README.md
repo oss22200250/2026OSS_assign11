@@ -1,42 +1,35 @@
-# OSS Week 11 — React Course Manager (Student Starter)
+# 1 Project Information
+리액트를 이용한 Course Manager. 과목 조회/추가/삭제 기능이 있으며, 과목별 상태 변경이 가능하다.
+### [원본 sample URL](https://github.com/2026-2-OSS/week11_sample_project)
 
-React + Vite 기반 학생 배포용 Sample Project입니다. **조회와 삭제는 완성**, 등록 및 완료 변경은 학생이 직접 구현하도록 `TODO`로 남겨두었습니다.
 
-## 실행 방법
+# 2 Installation
+npm install로 설치, npm run dev로 실행
+### 실행 화면
+![실행 화면](./Screenshot.png)
 
-Node.js 20.19+ 또는 22.12+ 권장.
 
-```bash
-npm install
-npm run dev
-```
+# 3 Source Code Exploration
+## 1 Project Structure
+- **App.jsx** : 최상위 컨테이너, 제목과 푸터를 감싸며, 메인 컨텐츠인 <CourseList/> 컴포넌트를 화면 중앙에 불러와 배치.
+- **CourseList.jsx** : 목록 관리, 과목들의 목록을 useState로 갖는 핵심 파일. 데이터를 가공하는 함수를 정의하고, 배열의 개수만큼 <CourseItem/>을 찍어냄.
+- **CourseItem.jsx** : 개별 UI, 과목 하나의 UI를 그리는 틀. 부모에서 정의한 대로 화면에 데이터 보여주고, 버튼이 눌리면 부모에게서 받은 함수를 대신 실행.
 
-브라우저에 표시되는 Local URL에 접속하세요. 빌드 테스트: `npm run build`.
+## 2 Component & Props
 
-## 소스 구조
 
-- `src/App.jsx`: 페이지 전체 레이아웃
-- `src/components/CourseList.jsx`: State 및 목록, 삭제 로직, **TODO 1/2**
-- `src/components/CourseItem.jsx`: Props로 데이터를 받고 이벤트 콜백 호출
-- `src/data/courses.js`: 초기 과목 데이터
-- `src/App.css`: 전체 디자인
+## 3 State & Event
 
-## 수행 내용
 
-1. 코드를 실행하고 목록 조회·삭제를 확인합니다.
-2. 초기 과목 5개 이상, 제목, CSS 3곳 이상 변경합니다.
-3. `CourseList.jsx`의 **TODO 1**: 과목 등록 (빈 값 입력 방지, 고유 id 지정, State 업데이트).
-4. `CourseList.jsx`의 **TODO 2**: 완료 체크박스 클릭 시 `completed` 상태 변경.
-5. 선택: 검색/필터, 이름 수정 기능 추가.
-6. GitHub에 Commit/Push 후 Vercel에 배포합니다.
-7. README에 프로젝트 소개, 주요 코드 분석 2개, 변경 내용, Weekly Review, GitHub URL, Vercel URL을 정리합니다.
+## 4 Code Analysis
 
-## 확인할 질문
+# 4 Customizing
 
-- `CourseList`와 `CourseItem`의 역할은?
-- 왜 `courses`를 직접 수정하지 않고 `setCourses()`를 사용할까요?
-- `map()`과 `filter()`는 각각 어떤 목적인가요?
-- `course`, `onDelete`, `onToggle` Props는 어디에서 전달되나요?
-- 브라우저 새로고침 시 데이터가 초기화되는 이유는? (DB/localStorage 없음)
 
-> 교육 목적의 로컬 State 앱입니다. 서버 API 및 데이터베이스는 사용하지 않습니다.
+# 5 Feature Extension
+
+
+# 6 Deployment
+
+
+# 7 Weekly Review
